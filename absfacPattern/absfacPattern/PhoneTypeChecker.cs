@@ -29,12 +29,13 @@ namespace absfacPattern
         {
             if (factory != null)    // Checks to see if factory is null because no factory means no products.
             {
+                Console.WriteLine(manu + " Factory Production:");
                 ISmart sPhone = factory.GetSmart();
                 IDumb dPhone = factory.GetDumb();
                 Console.Write("Smartphone: ");
-                Console.WriteLine(manu + sPhone.getName()); // Prints out the Manufacturer and Model of Smartphone
+                Console.WriteLine(manu + " " + sPhone.getName()); // Prints out the Manufacturer and Model of Smartphone
                 Console.Write("Dumb-Phone: ");
-                Console.WriteLine(manu + dPhone.getName()); // Prints out the Manufacturer and Model of Dumbphone
+                Console.WriteLine(manu + " " + dPhone.getName()); // Prints out the Manufacturer and Model of Dumbphone
             }
             else
             {

@@ -15,6 +15,21 @@ namespace absfacPattern
     {
         static void Main(string[] args)
         {
+            PhoneTypeChecker samsungPTC = new PhoneTypeChecker(Manufacturers.SAMSUNG);
+            PhoneTypeChecker htcPTC = new PhoneTypeChecker(Manufacturers.HTC);
+            PhoneTypeChecker nokiaPTC = new PhoneTypeChecker(Manufacturers.NOKIA);
+
+            samsungPTC.CheckProducts();
+            Console.WriteLine();
+            Console.ReadKey();
+            htcPTC.CheckProducts();
+            Console.WriteLine();
+            Console.ReadKey();
+            nokiaPTC.CheckProducts();
+            Console.WriteLine();
+            Console.ReadKey();
+
+            // The above lines test the three PTCs for the three factory types.
         }
     }
 }
