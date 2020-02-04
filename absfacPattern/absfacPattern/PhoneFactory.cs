@@ -8,6 +8,9 @@ using System.Threading.Tasks;
  * Date: 3 February 2020
  * File: PhoneFactory.cs
  * Description: This is the PhoneFactory file, which keeps track of all classes of the IPhoneFactory interface
+ * 
+ * Note: I don't know what manufacturers create what phones, so I just went from left-to-right on the .dia file.
+ *       Just imagine this is an alternate universe in which companies came up with different nomenclature.
  */
 namespace absfacPattern
 {
@@ -21,11 +24,11 @@ namespace absfacPattern
     {
         ISmart IPhoneFactory.GetSmart()
         {
-            return null;
+            return new Lumia();
         }
         IDumb IPhoneFactory.GetDumb()
         {
-            return null;
+            return new Asha();
         }
     }
 
@@ -33,11 +36,11 @@ namespace absfacPattern
     {
         ISmart IPhoneFactory.GetSmart()
         {
-            return null;
+            return new GalaxyS2();
         }
         IDumb IPhoneFactory.GetDumb()
         {
-            return null;
+            return new Genie();
         }
     }
 
@@ -45,11 +48,11 @@ namespace absfacPattern
     {
         ISmart IPhoneFactory.GetSmart()
         {
-            return null;
+            return new Titan();
         }
         IDumb IPhoneFactory.GetDumb()
         {
-            return null;
+            return new Primo();
         }
     }
 }

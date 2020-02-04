@@ -13,7 +13,7 @@ namespace absfacPattern
 {
     class PhoneTypeChecker
     {
-        public IPhoneFactory factory;
+        public IPhoneFactory factory = null;
         public Manufacturers manu;
 
         public PhoneTypeChecker(Manufacturers m)
@@ -27,8 +27,19 @@ namespace absfacPattern
         }
         public void CheckProducts()
         {
-            Console.Write("Production: ");
-            Console.WriteLine(manu);
+            if (factory != null)    // Checks to see if factory is null because no factory means no products.
+            {
+                ISmart sPhone = factory.GetSmart();
+                IDumb dPhone = factory.GetDumb();
+                Console.Write("Smartphone: ");
+                Console.WriteLine(manu + sPhone.getName()); // Prints out the Manufacturer and Model of Smartphone
+                Console.Write("Dumb-Phone: ");
+                Console.WriteLine(manu + dPhone.getName()); // Prints out the Manufacturer and Model of Dumbphone
+            }
+            else
+            {
+                Console.WriteLine("No factory. No products.");
+            }
         }
     }
 
