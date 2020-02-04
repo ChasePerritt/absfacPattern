@@ -19,21 +19,21 @@ namespace absfacPattern
     {
         string ISmart.getName()
         {
-            return null;
+            return "Lumia";
         }
     }
     class GalaxyS2 : ISmart
     {
         string ISmart.getName()
         {
-            return null;
+            return "GalaxyS2";
         }
     }
     class Titan : ISmart
     {
         string ISmart.getName()
         {
-            return null;
+            return "Titan";
         }
     }
 }

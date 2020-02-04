@@ -19,21 +19,21 @@ namespace absfacPattern
     {
         string IDumb.getName()
         {
-            return null;
+            return "Asha";
         }
     }
     class Genie : IDumb
     {
         string IDumb.getName()
         {
-            return null;
+            return "Genie";
         }
     }
     class Primo : IDumb
     {
         string IDumb.getName()
         {
-            return null;
+            return "Primo";
         }
     }
 }

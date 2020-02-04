@@ -18,11 +18,17 @@ namespace absfacPattern
 
         public PhoneTypeChecker(Manufacturers m)
         {
+            manu = m;
 
+            if (manu == Manufacturers.SAMSUNG) factory = new SamsungFactory();
+            else if (manu == Manufacturers.HTC) factory = new HTCFactory();
+            else if (manu == Manufacturers.NOKIA) factory = new NokiaFactory();
+            else factory = null;
         }
         public void CheckProducts()
         {
-
+            Console.Write("Production: ");
+            Console.WriteLine(manu);
         }
     }
 
